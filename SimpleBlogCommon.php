@@ -116,7 +116,13 @@ class SimpleBlogCommon{
 		static $added			= false;
 
 		if( !$added ){
-			$page->jQueryCode	.= '$(".blog_gadget_link").click(function(){ $(this).next(".nodisplay").toggle(); });';
+			$page->jQueryCode	.= '$(window).load(function(){ $("li").click(function(e){ e.stopPropagation();
+    if(this.getElementsByTagName("ul")[0].style.display =="block") $(this).find("ul").slideUp();
+    else
+		$(this).children(":first").slideDown();
+    });
+    });';
+    	$page->jQueryCode	.= '$(".blog_gadget_link").click(function(){ $(this).next(".nodisplay").toggle(); });';
 			$page->css_user[]	= '/data/_addoncode/'.$addonFolderName.'/static/style.css';
 			$added				= true;
 		}
@@ -939,5 +945,3 @@ class SimpleBlogCommon{
 
 
 }
-
-
