@@ -239,7 +239,7 @@ class StaticGenerator{
 				if( $prev_year !== false ){
 					echo '</li>';
 				}
-				echo '<li><div class="simple_blog_gadget_year">'.$y.'</div>';
+				echo '<li class="simple_blog_gadget_year">'.$y;
 				$prev_year = $y;
 			}
 			$sum = count($posts);
@@ -249,23 +249,23 @@ class StaticGenerator{
 
 
 			echo '<ul>';
-			echo '<li><a class="blog_gadget_link">';
+			echo '<li class="blog_gadget_link">';
 			$time = strtotime($ym.'-01');
 			echo strftime('%B',$time);
-			echo ' ('.$sum.')</a>';
-			echo '<ul class="simple_blog_category_posts nodisplay">';
+			echo ' ('.$sum.')';
+			echo '<ul>';
 			foreach($posts as $post_id ){
 				$post_title = SimpleBlogCommon::AStrGet('titles',$post_id);
-				echo '<li>';
+				echo '<li class="simple_blog_category_posts">';
 				echo SimpleBlogCommon::PostLink($post_id, $post_title );
 				echo '</li>';
 			}
 			echo '</ul>';
 			echo '</li>';
 			echo '</ul>';
+			echo '</li>';
 		}
-
-		echo '</li></ul>';
+		echo '</ul>';
 
 		$content = ob_get_clean();
 
