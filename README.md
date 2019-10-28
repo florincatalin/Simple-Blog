@@ -12,3 +12,26 @@ with an example on
 
 https://jsfiddle.net/ufb9q3n3/
 
+Unfortunately, this approach requires the modification of the original generator code in php, which is difficult to achieve.
+After careful documentation we discovered on stackoverflow that modern browsers allow a smarter approach to the situation:
+
+https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div
+
+Without jquery, without too many code changes!
+Here is the code:
+
+```
+  <Details>
+<summary> This is what you want to show before expanding </summary>
+<p> This is where you put the details that are shown once expanded </p>
+</ Details>
+```
+
+Here is demo:
+
+
+<Details>
+<summary> This is what you want to show before expanding </summary>
+<p> This is where you put the details that are shown once expanded </p>
+</ Details>
+
