@@ -239,7 +239,7 @@ class StaticGenerator{
 				if( $prev_year !== false ){
 					echo '</li>';
 				}
-				echo '<details>';
+				echo '</details><details close>'; /* Thanks to mabu */
 				echo '<summary>';
 				echo '<li><div class="simple_blog_gadget_year">'.$y.'</div>';
 				echo '</summary>';
