@@ -19,21 +19,6 @@ https://stackoverflow.com/questions/15095933/pure-css-collapse-expand-div
 
 Without jquery, without too many code changes!
 
-Unfortunately, this solution does not work well for browsers that have not implemented the <details> and <summary> tags.
-Another solution, using jquery, was suggested by Juergen and will be available as an update (3.0.5) to the Simple Blog plugin on the Typesetter [site](https://www.typesettercms.com/Plugins/17_Simple_Blog)
-
-
-
-
-Here is the code:
-
-
-```
-
-<details>
-<summary> This is what you want to show before expanding </summary>
-<p> This is where you put the details that are shown once expanded </p>
-</details>
-
-
-```
+Unfortunately, this solution does not work well for browsers that have not implemented the <i>details</i> and <i>summary</i> tags.
+Another solution, using jquery, was suggested by Juergen and will be available soon as an update (3.0.5) to the Simple Blog plugin on the Typesetter [site](https://www.typesettercms.com/Plugins/17_Simple_Blog).
+This solution is deprecated.
